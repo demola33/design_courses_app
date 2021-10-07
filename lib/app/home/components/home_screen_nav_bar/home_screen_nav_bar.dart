@@ -1,4 +1,4 @@
-import 'package:design_courses/app/home/components/home_screen_nav_bar/nav_bar_search_widget.dart';
+import 'package:design_courses/app/home/components/home_screen_nav_bar/search_field_widget.dart';
 import 'package:design_courses/app/home/components/home_screen_nav_bar/side_bar_button.dart';
 import 'package:design_courses/layout/constants.dart';
 import 'package:flutter/cupertino.dart';

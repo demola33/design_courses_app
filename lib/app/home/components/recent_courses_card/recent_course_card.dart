@@ -10,6 +10,7 @@ class RecentCourseCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
+      alignment: Alignment.topRight,
       children: [
         Padding(
           padding: const EdgeInsets.only(top: 20.0),
@@ -65,24 +66,24 @@ class RecentCourseCard extends StatelessWidget {
             ),
           ),
         ),
-        Positioned(
-          right: 40,
-          top: 0,
+        Padding(
+          padding: const EdgeInsets.only(right: 40.0),
           child: Container(
             child: Image.asset('asset/logos/${course.logo}'),
             height: 60,
             width: 60,
             padding: const EdgeInsets.all(12.0),
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(18.0),
-                color: Colors.white,
-                boxShadow: const [
-                  BoxShadow(
-                    color: kShadowColor,
-                    offset: Offset(0, 4),
-                    blurRadius: 16.0,
-                  )
-                ]),
+              borderRadius: BorderRadius.circular(18.0),
+              color: Colors.white,
+              boxShadow: const [
+                BoxShadow(
+                  color: kShadowColor,
+                  offset: Offset(0, 4),
+                  blurRadius: 16.0,
+                )
+              ],
+            ),
           ),
         ),
       ],

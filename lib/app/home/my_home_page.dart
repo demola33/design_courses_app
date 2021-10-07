@@ -1,4 +1,5 @@
-import 'package:design_courses/app/home/components/recent_course_card.dart';
+import 'package:design_courses/app/home/components/recent_courses_card/recent_course_card.dart';
+import 'package:design_courses/app/home/components/recent_courses_card/recent_course_list.dart';
 import 'package:design_courses/app/model/course.dart';
 import 'package:design_courses/layout/constants.dart';
 import 'package:flutter/material.dart';
@@ -17,9 +18,25 @@ class MyHomePage extends StatelessWidget {
           child: Column(
             children: [
               const HomeScreenNavBar(),
-              RecentCourseCard(
-                course: recentCourses[0],
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Text(
+                      'Recents',
+                      style: kLargeTitleStyle,
+                    ),
+                    const SizedBox(height: 5.0),
+                    Text(
+                      '23 courses, more coming soon!',
+                      style: kSubtitleStyle,
+                    ),
+                  ],
+                ),
               ),
+              const SizedBox(height: 15),
+              RecentCourseList(),
             ],
           ),
         ),
