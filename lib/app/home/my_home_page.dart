@@ -1,9 +1,9 @@
-import 'package:design_courses/app/home/components/recent_courses_card/recent_course_card.dart';
 import 'package:design_courses/app/home/components/recent_courses_card/recent_course_list.dart';
 import 'package:design_courses/app/model/course.dart';
 import 'package:design_courses/layout/constants.dart';
 import 'package:flutter/material.dart';
 
+import 'components/explore_course_list/explore_course_list.dart';
 import 'components/home_screen_nav_bar/home_screen_nav_bar.dart';
 
 class MyHomePage extends StatelessWidget {
@@ -15,7 +15,7 @@ class MyHomePage extends StatelessWidget {
       body: Container(
         color: kBackgroundColor,
         child: SafeArea(
-          child: Column(
+          child: ListView(
             children: [
               const HomeScreenNavBar(),
               Padding(
@@ -36,7 +36,25 @@ class MyHomePage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 15),
-              RecentCourseList(),
+              const RecentCourseList(),
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 20,
+                  right: 25,
+                  top: 20,
+                  bottom: 16,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Text(
+                      'Explore',
+                      style: kTitle1Style,
+                    ),
+                  ],
+                ),
+              ),
+              const ExploreCourseList(),
             ],
           ),
         ),

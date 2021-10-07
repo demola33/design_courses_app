@@ -9,7 +9,7 @@ class SearchFieldWidget extends StatelessWidget {
     const String hintText = 'Search for courses';
     return Expanded(
       child: Padding(
-        padding: const EdgeInsets.only(left: 12.0, right: 12.0),
+        padding: const EdgeInsets.only(left: 12.0, right: 33.0),
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(14.0),
