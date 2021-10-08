@@ -5,7 +5,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreenNavBar extends StatelessWidget {
-  const HomeScreenNavBar({Key? key}) : super(key: key);
+  const HomeScreenNavBar({Key? key, required this.triggerAnimation})
+      : super(key: key);
+
+  final Function() triggerAnimation;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +19,9 @@ class HomeScreenNavBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const SideBarButton(),
+          SideBarButton(
+            triggerAnimation: triggerAnimation,
+          ),
           const SearchFieldWidget(),
           const Icon(
             Icons.notifications,

@@ -16,30 +16,30 @@ class SideBarScreen extends StatelessWidget {
     const String fullName = 'Akanmu Ademola';
     const String dateJoined = 'Joined 5th Oct 2021';
     const String logOut = 'Log Out';
-    const SizedBox customSizedBox = SizedBox(height: 32);
+    SizedBox customSizedBox = SizedBox(height: height40);
 
     return Container(
       height: size.height,
-      width: size.width * 0.85,
-      decoration: const BoxDecoration(
+      width: width350,
+      decoration: BoxDecoration(
         color: kSidebarBackgroundColor,
         borderRadius: BorderRadius.only(
-          topRight: Radius.circular(35),
+          topRight: Radius.circular(rad35),
         ),
       ),
-      padding: const EdgeInsets.symmetric(
-        vertical: 35.0,
-        horizontal: 20.0,
+      padding: EdgeInsets.symmetric(
+        vertical: height35,
+        horizontal: width20,
       ),
       child: Column(
         children: [
           Row(
             children: [
-              const CircleAvatar(
-                backgroundImage: AssetImage(profileURL),
-                radius: 21.0,
+              CircleAvatar(
+                backgroundImage: const AssetImage(profileURL),
+                radius: rad35,
               ),
-              const SizedBox(width: 14),
+              SizedBox(width: width15),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -57,7 +57,7 @@ class SideBarScreen extends StatelessWidget {
             ],
           ),
           SizedBox(
-            height: size.height * 0.08,
+            height: height50,
           ),
           customSizedBox,
           SideBarRow(
@@ -80,7 +80,7 @@ class SideBarScreen extends StatelessWidget {
           Row(children: [
             Image.asset(
               logOutURL,
-              width: 17.0,
+              width: width17,
             ),
             const SizedBox(width: 4),
             Text(

@@ -4,15 +4,16 @@ import 'package:flutter/material.dart';
 class SideBarButton extends StatelessWidget {
   const SideBarButton({
     Key? key,
+    required this.triggerAnimation,
   }) : super(key: key);
+
+  final Function() triggerAnimation;
 
   @override
   Widget build(BuildContext context) {
     const String iconURL = 'icon-sidebar.png';
     return RawMaterialButton(
-      onPressed: () {
-        print('Nav Button Pressed');
-      },
+      onPressed: triggerAnimation,
       materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
       constraints: const BoxConstraints(
         maxHeight: 40.0,

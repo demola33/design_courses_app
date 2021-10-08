@@ -1,7 +1,5 @@
-import 'package:design_courses/app/home/my_home_page.dart';
-import 'package:design_courses/layout/size_config.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
+import 'package:design_courses/app/home/screens/home_screen.dart';
 
 void main() {
   //debugPaintSizeEnabled = true;
@@ -16,7 +14,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Design Courses',
-      home: MyHomePage(),
+      home: HomeScreen(),
     );
   }
 }
