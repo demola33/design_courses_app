@@ -1,6 +1,6 @@
 import 'package:design_courses/app/home/components/recent_courses_card/recent_course_list.dart';
-import 'package:design_courses/app/model/course.dart';
 import 'package:design_courses/layout/constants.dart';
+import 'package:design_courses/layout/size_config.dart';
 import 'package:flutter/material.dart';
 
 import 'components/explore_course_list/explore_course_list.dart';
@@ -11,11 +11,12 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return Scaffold(
       body: Container(
         color: kBackgroundColor,
         child: SafeArea(
-          child: ListView(
+          child: Column(
             children: [
               const HomeScreenNavBar(),
               Padding(
@@ -35,14 +36,14 @@ class MyHomePage extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(height: 15),
+              SizedBox(height: height16),
               const RecentCourseList(),
               Padding(
-                padding: const EdgeInsets.only(
-                  left: 20,
-                  right: 25,
-                  top: 20,
-                  bottom: 16,
+                padding: EdgeInsets.only(
+                  left: width20,
+                  right: width25,
+                  top: height20,
+                  bottom: height16,
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,

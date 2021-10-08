@@ -13,33 +13,33 @@ class RecentCourseCard extends StatelessWidget {
       alignment: Alignment.topRight,
       children: [
         Padding(
-          padding: const EdgeInsets.only(top: 20.0),
+          padding: EdgeInsets.only(top: height20),
           child: Container(
-            height: 240,
-            width: 240,
+            height: height240,
+            width: width240,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(41.0),
+              borderRadius: BorderRadius.circular(rad40),
               gradient: course.background,
               boxShadow: [
                 BoxShadow(
                   color: course.background.colors[0].withOpacity(0.3),
-                  offset: const Offset(0, 20),
-                  blurRadius: 30.0,
+                  offset: Offset(0, height20),
+                  blurRadius: rad30,
                 ),
                 BoxShadow(
                   color: course.background.colors[1].withOpacity(0.3),
-                  offset: const Offset(0, 20),
-                  blurRadius: 30.0,
+                  offset: Offset(0, height20),
+                  blurRadius: rad30,
                 )
               ],
             ),
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(
-                    top: 32,
-                    right: 32,
-                    left: 32,
+                  padding: EdgeInsets.only(
+                    top: height30,
+                    right: width30,
+                    left: width30,
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -67,20 +67,20 @@ class RecentCourseCard extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(right: 40.0),
+          padding: EdgeInsets.only(right: width40),
           child: Container(
             child: Image.asset('asset/logos/${course.logo}'),
-            height: 60,
-            width: 60,
-            padding: const EdgeInsets.all(12.0),
+            height: height60,
+            width: width60,
+            padding: EdgeInsets.all(pad12),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(18.0),
+              borderRadius: BorderRadius.circular(rad18),
               color: Colors.white,
-              boxShadow: const [
+              boxShadow: [
                 BoxShadow(
                   color: kShadowColor,
-                  offset: Offset(0, 4),
-                  blurRadius: 16.0,
+                  offset: const Offset(0, 4),
+                  blurRadius: rad16,
                 )
               ],
             ),

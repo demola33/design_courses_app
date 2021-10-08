@@ -12,20 +12,20 @@ class HomeScreenNavBar extends StatelessWidget {
     const String profileURL = 'profile.jpg';
 
     return Padding(
-      padding: const EdgeInsets.all(20.0),
+      padding: EdgeInsets.all(pad20),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: const [
-          SideBarButton(),
-          SearchFieldWidget(),
-          Icon(
+        children: [
+          const SideBarButton(),
+          const SearchFieldWidget(),
+          const Icon(
             Icons.notifications,
             color: kPrimaryLabelColor,
           ),
-          SizedBox(width: 15.0),
+          SizedBox(width: width15),
           CircleAvatar(
-            backgroundImage: AssetImage('asset/images/$profileURL'),
-            radius: 18.0,
+            backgroundImage: const AssetImage('asset/images/$profileURL'),
+            radius: rad18,
           ),
         ],
       ),

@@ -1,5 +1,6 @@
 import 'package:design_courses/app/home/components/recent_courses_card/recent_course_card.dart';
 import 'package:design_courses/app/model/course.dart';
+import 'package:design_courses/layout/constants.dart';
 import 'package:flutter/material.dart';
 
 class RecentCourseList extends StatefulWidget {
@@ -40,7 +41,7 @@ class _RecentCourseListState extends State<RecentCourseList> {
     return Column(
       children: [
         Container(
-          height: 320,
+          height: height320,
           width: double.infinity,
           child: PageView.builder(
             itemBuilder: (context, index) {
@@ -54,7 +55,7 @@ class _RecentCourseListState extends State<RecentCourseList> {
             itemCount: recentCourses.length,
             controller: PageController(
               initialPage: 0,
-              viewportFraction: 0.7,
+              viewportFraction: 0.65,
             ),
             onPageChanged: (index) {
               setState(() {

@@ -22,22 +22,22 @@ class SideBarButton extends StatelessWidget {
       highlightColor: Colors.transparent,
       child: Container(
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(14.0),
+            borderRadius: BorderRadius.circular(rad14),
             color: Colors.white,
-            boxShadow: const [
+            boxShadow: [
               BoxShadow(
                 color: kShadowColor,
-                offset: Offset(0, 12),
-                blurRadius: 16.0,
+                offset: Offset(0, height12),
+                blurRadius: rad16,
               ),
             ]),
         child: Image.asset(
           'asset/icons/$iconURL',
           color: kPrimaryLabelColor,
         ),
-        padding: const EdgeInsets.symmetric(
-          horizontal: 12.0,
-          vertical: 14.0,
+        padding: EdgeInsets.symmetric(
+          horizontal: width12,
+          vertical: height14,
         ),
       ),
     );

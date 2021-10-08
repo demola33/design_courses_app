@@ -10,17 +10,17 @@ class ExploreCourseCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right: 20),
+      padding: EdgeInsets.only(right: width20),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(41.0),
+        borderRadius: BorderRadius.circular(rad40),
         child: Container(
-          height: 120,
-          width: 280,
+          height: height120,
+          width: width280,
           decoration: BoxDecoration(
             gradient: course.background,
           ),
           child: Padding(
-            padding: const EdgeInsets.only(left: 32),
+            padding: EdgeInsets.only(left: width30),
             child: Row(
               children: [
                 Expanded(
@@ -44,7 +44,7 @@ class ExploreCourseCard extends StatelessWidget {
                   children: [
                     Image.asset(
                       'asset/illustrations/${course.illustration}',
-                      height: 100.0,
+                      height: height100,
                       fit: BoxFit.contain,
                     ),
                   ],
