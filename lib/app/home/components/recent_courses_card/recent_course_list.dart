@@ -1,7 +1,8 @@
 import 'package:design_courses/app/home/components/recent_courses_card/recent_course_card.dart';
+import 'package:design_courses/app/home/screens/course_screen.dart';
 import 'package:design_courses/app/model/course.dart';
-import 'package:design_courses/layout/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class RecentCourseList extends StatefulWidget {
   const RecentCourseList({Key? key}) : super(key: key);
@@ -21,9 +22,9 @@ class _RecentCourseListState extends State<RecentCourseList> {
         (course) {
           int index = recentCourses.indexOf(course);
           return Container(
-            width: 7.0,
-            height: 7.0,
-            margin: const EdgeInsets.symmetric(horizontal: 6.0),
+            width: 7.0.w,
+            height: 7.0.w,
+            margin: EdgeInsets.symmetric(horizontal: 6.0.w),
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               color: currentPage == index
@@ -40,22 +41,30 @@ class _RecentCourseListState extends State<RecentCourseList> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
-          height: height320,
+        SizedBox(
+          height: 320.h,
           width: double.infinity,
           child: PageView.builder(
+            physics: const BouncingScrollPhysics(),
             itemBuilder: (context, index) {
-              return Opacity(
-                opacity: currentPage == index ? 1.0 : 0.5,
-                child: RecentCourseCard(
-                  course: recentCourses[index],
+              return GestureDetector(
+                onTap: () => Navigator.push(context,
+                  MaterialPageRoute(
+                    builder: (context) => CourseScreen(course: recentCourses[index]),
+                  )
+                ),
+                child: Opacity(
+                  opacity: currentPage == index ? 1.0 : 0.5,
+                  child: RecentCourseCard(
+                    course: recentCourses[index],
+                  ),
                 ),
               );
             },
             itemCount: recentCourses.length,
             controller: PageController(
               initialPage: 0,
-              viewportFraction: 0.65,
+              viewportFraction: 0.55,
             ),
             onPageChanged: (index) {
               setState(() {

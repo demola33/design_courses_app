@@ -1,5 +1,6 @@
 import 'package:design_courses/app/model/course.dart';
 import 'package:design_courses/layout/constants.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
 class RecentCourseCard extends StatelessWidget {
@@ -13,23 +14,23 @@ class RecentCourseCard extends StatelessWidget {
       alignment: Alignment.topRight,
       children: [
         Padding(
-          padding: EdgeInsets.only(top: height20),
+          padding: EdgeInsets.only(top: 20.h),
           child: Container(
-            height: height240,
-            width: width240,
+            height: 240.h,
+            width: 240.h,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(rad40),
+              borderRadius: BorderRadius.circular(41.r),
               gradient: course.background,
               boxShadow: [
                 BoxShadow(
                   color: course.background.colors[0].withOpacity(0.3),
-                  offset: Offset(0, height20),
-                  blurRadius: rad30,
+                  offset: Offset(0, 20.h),
+                  blurRadius: 30.r,
                 ),
                 BoxShadow(
                   color: course.background.colors[1].withOpacity(0.3),
-                  offset: Offset(0, height20),
-                  blurRadius: rad30,
+                  offset: Offset(0, 20.h),
+                  blurRadius: 30.r,
                 )
               ],
             ),
@@ -37,29 +38,41 @@ class RecentCourseCard extends StatelessWidget {
               children: [
                 Padding(
                   padding: EdgeInsets.only(
-                    top: height30,
-                    right: width30,
-                    left: width30,
+                    top: 31.h,
+                    right: 32.h,
+                    left: 32.h,
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        course.courseSubtitle,
-                        style: kCardSubtitleStyle,
+                      Hero(
+                        tag: course.courseSubtitle,
+                        child: Text(
+                          course.courseSubtitle,
+                          style: kCardSubtitleStyle,
+                        ),
                       ),
-                      const SizedBox(height: 6.0),
-                      Text(
-                        course.courseTitle,
-                        style: kCardTitleStyle,
+                      SizedBox(height: 6.0.h),
+                      Hero(
+                        tag: course.courseTitle,
+                        child: Text(
+                          course.courseTitle,
+                          style: kCardTitleStyle,
+                        ),
                       )
                     ],
                   ),
                 ),
                 Expanded(
-                  child: Image.asset(
-                    'asset/illustrations/${course.illustration}',
-                    fit: BoxFit.cover,
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 20.h),
+                    child: Hero(
+                      tag: course.illustration,
+                      child: Image.asset(
+                        'asset/illustrations/${course.illustration}',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
                   ),
                 ),
               ],
@@ -67,20 +80,28 @@ class RecentCourseCard extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(right: width40),
+          padding: EdgeInsets.only(right: 40.h),
           child: Container(
-            child: Image.asset('asset/logos/${course.logo}'),
-            height: height60,
-            width: width60,
-            padding: EdgeInsets.all(pad12),
+            child: Hero(
+              tag: course.logo!,
+              child: Image.asset('asset/logos/${course.logo}'),
+            ),
+            height: 60.h,
+            width: 60.h,
+            padding: EdgeInsets.only(
+              top: 14.h,
+              bottom: 14.h,
+              left: 12.h,
+              right: 8.h,
+            ),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(rad18),
+              borderRadius: BorderRadius.circular(18.r),
               color: Colors.white,
               boxShadow: [
                 BoxShadow(
                   color: kShadowColor,
-                  offset: const Offset(0, 4),
-                  blurRadius: rad16,
+                  offset: Offset(0, 4.h),
+                  blurRadius: 8.r,
                 )
               ],
             ),

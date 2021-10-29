@@ -2,6 +2,7 @@ import 'package:design_courses/app/home/components/side_bar_row.dart';
 import 'package:design_courses/app/model/side_bar_item.dart';
 import 'package:design_courses/layout/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SideBarScreen extends StatelessWidget {
   const SideBarScreen({
@@ -16,20 +17,20 @@ class SideBarScreen extends StatelessWidget {
     const String fullName = 'Akanmu Ademola';
     const String dateJoined = 'Joined 5th Oct 2021';
     const String logOut = 'Log Out';
-    SizedBox customSizedBox = SizedBox(height: height40);
+    SizedBox customSizedBox = SizedBox(height: 40.h);
 
     return Container(
       height: size.height,
-      width: width350,
+      width: 350.w,
       decoration: BoxDecoration(
         color: kSidebarBackgroundColor,
         borderRadius: BorderRadius.only(
-          topRight: Radius.circular(rad35),
+          topRight: Radius.circular(35.r),
         ),
       ),
       padding: EdgeInsets.symmetric(
-        vertical: height35,
-        horizontal: width20,
+        vertical: 35.h,
+        horizontal: 20.w,
       ),
       child: Column(
         children: [
@@ -37,9 +38,9 @@ class SideBarScreen extends StatelessWidget {
             children: [
               CircleAvatar(
                 backgroundImage: const AssetImage(profileURL),
-                radius: rad35,
+                radius: 35.r,
               ),
-              SizedBox(width: width15),
+              SizedBox(width: 15.w),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -57,7 +58,7 @@ class SideBarScreen extends StatelessWidget {
             ],
           ),
           SizedBox(
-            height: height50,
+            height: 50.h,
           ),
           customSizedBox,
           SideBarRow(
@@ -80,7 +81,7 @@ class SideBarScreen extends StatelessWidget {
           Row(children: [
             Image.asset(
               logOutURL,
-              width: width17,
+              width: 17.w,
             ),
             const SizedBox(width: 4),
             Text(

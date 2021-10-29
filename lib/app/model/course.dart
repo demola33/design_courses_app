@@ -20,8 +20,8 @@ class Course {
 
 List<Course> recentCourses = [
   Course(
-    courseTitle: 'Building Animations with Flutter',
-    courseSubtitle: '38 Sections',
+    courseTitle: 'Flutter for Designers',
+    courseSubtitle: '12 Sections',
     illustration: 'illustration-01.png',
     logo: 'flutter-logo.png',
     background: const LinearGradient(
@@ -68,7 +68,7 @@ List<Course> recentCourses = [
 List<Course> exploreCourses = [
   Course(
     courseTitle: "Build an app with SwiftUI",
-    courseSubtitle: "22 sections",
+    courseSubtitle: "22 Sections",
     background: const LinearGradient(
       begin: Alignment.topLeft,
       end: Alignment.bottomRight,
@@ -81,7 +81,7 @@ List<Course> exploreCourses = [
   ),
   Course(
     courseTitle: "Build an app with SwiftUI",
-    courseSubtitle: "22 sections",
+    courseSubtitle: "22 Sections",
     background: const LinearGradient(
       begin: Alignment.topLeft,
       end: Alignment.bottomRight,
@@ -96,6 +96,58 @@ List<Course> exploreCourses = [
 
 // Continue Watching Courses
 var continueWatchingCourses = [
+  Course(
+    courseTitle: "React for Designers",
+    courseSubtitle: "SVG Animations",
+    background: const LinearGradient(
+      begin: Alignment.topLeft,
+      end: Alignment.bottomRight,
+      colors: [
+        Color(0xFF4E62CC),
+        Color(0xFF202A78),
+      ],
+    ),
+    illustration: 'illustration-06.png',
+  ),
+  Course(
+    courseTitle: "Animating in Principle",
+    courseSubtitle: "Multiple Scrolling",
+    background: const LinearGradient(
+      begin: Alignment.topLeft,
+      end: Alignment.bottomRight,
+      colors: [
+        Color(0xFFFA7D75),
+        Color(0xFFC23D61),
+      ],
+    ),
+    illustration: 'illustration-07.png',
+  ),
+  Course(
+    courseTitle: "React for Designers",
+    courseSubtitle: "SVG Animations",
+    background: const LinearGradient(
+      begin: Alignment.topLeft,
+      end: Alignment.bottomRight,
+      colors: [
+        Color(0xFF4E62CC),
+        Color(0xFF202A78),
+      ],
+    ),
+    illustration: 'illustration-06.png',
+  ),
+  Course(
+    courseTitle: "Animating in Principle",
+    courseSubtitle: "Multiple Scrolling",
+    background: const LinearGradient(
+      begin: Alignment.topLeft,
+      end: Alignment.bottomRight,
+      colors: [
+        Color(0xFFFA7D75),
+        Color(0xFFC23D61),
+      ],
+    ),
+    illustration: 'illustration-07.png',
+  ),
   Course(
     courseTitle: "React for Designers",
     courseSubtitle: "SVG Animations",

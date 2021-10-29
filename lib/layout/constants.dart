@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:design_courses/layout/size_config.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
 // Colors
@@ -14,14 +15,14 @@ const kCourseElementIconColor = Color(0xFF17294D);
 // Text Styles
 
 var kLargeTitleStyle = TextStyle(
-  fontSize: SizeConfig.blockSizeVertical * 3,
+  fontSize: 28.0.sp,
   fontWeight: FontWeight.bold,
   color: kPrimaryLabelColor,
   fontFamily: Platform.isIOS ? 'SF Pro Text' : null,
   decoration: TextDecoration.none,
 );
 var kTitle1Style = TextStyle(
-  fontSize: SizeConfig.blockSizeVertical * 3,
+  fontSize: 22.0.sp,
   fontWeight: FontWeight.bold,
   color: kPrimaryLabelColor,
   fontFamily: Platform.isIOS ? 'SF Pro Text' : null,
@@ -31,97 +32,60 @@ var kCardTitleStyle = TextStyle(
   fontFamily: Platform.isIOS ? 'SF Pro Text' : null,
   fontWeight: FontWeight.bold,
   color: Colors.white,
-  fontSize: SizeConfig.blockSizeVertical * 3,
+  fontSize: 22.sp,
   decoration: TextDecoration.none,
 );
 var kTitle2Style = TextStyle(
-  fontSize: 20.0,
+  fontSize: 20.0.sp,
   fontWeight: FontWeight.bold,
   color: kPrimaryLabelColor,
   fontFamily: Platform.isIOS ? 'SF Pro Text' : null,
   decoration: TextDecoration.none,
 );
-var kHeadlineLabelStyle = const TextStyle(
-  fontSize: 17.0,
+var kHeadlineLabelStyle = TextStyle(
+  fontSize: 17.0.sp,
   fontWeight: FontWeight.w800,
   color: kPrimaryLabelColor,
   fontFamily: 'SF Pro Text',
   decoration: TextDecoration.none,
 );
-//double pad15 = SizeConfig.blockSizeVertical * 2;
-double pad12 = SizeConfig.blockSizeVertical * 1.6;
-double pad20 = SizeConfig.blockSizeVertical * 2.67;
 
-double rad40 = SizeConfig.blockSizeVertical * 5.33;
-double rad14 = SizeConfig.blockSizeVertical * 1.8640;
-double rad16 = SizeConfig.blockSizeVertical * 2.13;
-double rad18 = SizeConfig.blockSizeVertical * 2.40;
-double rad20 = SizeConfig.blockSizeVertical * 2.6667;
-double rad30 = SizeConfig.blockSizeVertical * 4;
-double rad35 = SizeConfig.blockSizeVertical * 4.6667;
-
-double height320 = SizeConfig.screenHeight * 0.3571;
-double height240 = SizeConfig.screenHeight * 0.2679;
-double height100 = SizeConfig.screenHeight * 0.1117;
-double height120 = SizeConfig.screenHeight * 0.1340;
-double height20 = SizeConfig.screenHeight * 0.0220;
-double height16 = SizeConfig.screenHeight * 0.0176;
-double height14 = SizeConfig.screenHeight * 0.0154;
-double height12 = SizeConfig.screenHeight * 0.0132;
-double height60 = SizeConfig.screenHeight * 0.066;
-double height30 = SizeConfig.screenHeight * 0.033;
-double height35 = SizeConfig.screenHeight * 0.0385;
-double height40 = SizeConfig.screenHeight * 0.044;
-double height50 = SizeConfig.screenHeight * 0.055;
 double screenHeight = SizeConfig.screenHeight;
-
 double screenWidth = SizeConfig.screenWidth;
-double width60 = SizeConfig.screenWidth * 0.1450;
-double width12 = SizeConfig.screenWidth * 0.0290;
-double width15 = SizeConfig.screenWidth * 0.0362;
-double width17 = SizeConfig.screenWidth * 0.0410;
-double width20 = SizeConfig.screenWidth * 0.0483;
-double width25 = SizeConfig.screenWidth * 0.0604;
-double width30 = SizeConfig.screenWidth * 0.0725;
-double width35 = SizeConfig.screenWidth * 0.0846;
-double width40 = SizeConfig.screenWidth * 0.0967;
-double width240 = SizeConfig.screenWidth * 0.5780;
-double width280 = SizeConfig.screenWidth * 0.6743;
-double width350 = SizeConfig.screenWidth * 0.85;
 
 var kSubtitleStyle = TextStyle(
-  fontSize: SizeConfig.blockSizeVertical * 2,
+  fontSize: 16.0.sp,
   color: kSecondaryLabelColor,
   fontFamily: Platform.isIOS ? 'SF Pro Text' : null,
   decoration: TextDecoration.none,
 );
 var kBodyLabelStyle = TextStyle(
-  fontSize: 16.0,
+  fontSize: 16.0.sp,
   color: Colors.black,
   fontFamily: Platform.isIOS ? 'SF Pro Text' : null,
   decoration: TextDecoration.none,
 );
 var kCalloutLabelStyle = TextStyle(
-  fontSize: 16.0,
+  fontSize: 16.0.sp,
   fontWeight: FontWeight.w800,
   color: kPrimaryLabelColor,
   fontFamily: Platform.isIOS ? 'SF Pro Text' : null,
   decoration: TextDecoration.none,
 );
 var kSecondaryCalloutLabelStyle = TextStyle(
-  fontSize: 16.0,
+  fontSize: 16.0.sp,
   color: kSecondaryLabelColor,
   fontFamily: Platform.isIOS ? 'SF Pro Text' : null,
   decoration: TextDecoration.none,
 );
 var kSearchPlaceholderStyle = TextStyle(
-  fontSize: SizeConfig.blockSizeVertical * 2,
+  fontSize: 13.0.sp,
   color: kSecondaryLabelColor,
   fontFamily: Platform.isIOS ? 'SF Pro Text' : null,
   decoration: TextDecoration.none,
 );
 var kSearchTextStyle = TextStyle(
-  fontSize: 13.0,
+  fontSize: 13.0.sp,
   color: kPrimaryLabelColor,
   fontFamily: Platform.isIOS ? 'SF Pro Text' : null,
   decoration: TextDecoration.none,
@@ -129,11 +93,11 @@ var kSearchTextStyle = TextStyle(
 var kCardSubtitleStyle = TextStyle(
   fontFamily: Platform.isIOS ? 'SF Pro Text' : null,
   color: const Color(0xE6FFFFFF),
-  fontSize: SizeConfig.blockSizeVertical * 2,
+  fontSize: 13.0.sp,
   decoration: TextDecoration.none,
 );
 var kCaptionLabelStyle = TextStyle(
-  fontSize: 12.0,
+  fontSize: 12.0.sp,
   color: kSecondaryLabelColor,
   fontFamily: Platform.isIOS ? 'SF Pro Text' : null,
   decoration: TextDecoration.none,

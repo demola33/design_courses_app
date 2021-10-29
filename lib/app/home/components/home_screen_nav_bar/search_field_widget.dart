@@ -1,4 +1,5 @@
 import 'package:design_courses/layout/constants.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
 class SearchFieldWidget extends StatelessWidget {
@@ -9,21 +10,21 @@ class SearchFieldWidget extends StatelessWidget {
     const String hintText = 'Search for courses';
     return Expanded(
       child: Padding(
-        padding: EdgeInsets.only(left: width12, right: width30),
+        padding: EdgeInsets.only(left: 12.w, right: 30.w),
         child: Container(
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(rad14),
+            borderRadius: BorderRadius.circular(14.r),
             color: Colors.white,
             boxShadow: [
               BoxShadow(
                 color: kShadowColor,
-                offset: Offset(0, height12),
-                blurRadius: rad16,
+                offset: Offset(0, 12.h),
+                blurRadius: 16.r,
               ),
             ],
           ),
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: width15),
+            padding: EdgeInsets.symmetric(horizontal: 15.w),
             child: TextField(
               cursorColor: kPrimaryLabelColor,
               decoration: InputDecoration(
