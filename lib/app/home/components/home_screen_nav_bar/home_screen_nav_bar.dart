@@ -1,5 +1,6 @@
 import 'package:design_courses/app/home/components/home_screen_nav_bar/search_field_widget.dart';
 import 'package:design_courses/app/home/components/home_screen_nav_bar/side_bar_button.dart';
+import 'package:design_courses/app/home/screens/profile_screen.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:design_courses/layout/constants.dart';
 import 'package:flutter/cupertino.dart';
@@ -32,9 +33,18 @@ class HomeScreenNavBar extends StatelessWidget {
               color: kPrimaryLabelColor,
             ),
             SizedBox(width: 15.w),
-            CircleAvatar(
-              backgroundImage: const AssetImage('asset/images/$profileURL'),
-              radius: 18.r,
+            GestureDetector(
+              onTap: (){
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const ProfileScreen(),
+                  )
+                );
+              },
+              child: CircleAvatar(
+                backgroundImage: const AssetImage('asset/images/$profileURL'),
+                radius: 18.r,
+              ),
             ),
           ],
         ),
