@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:design_courses/app/home/screens/course_sections_screen.dart';
 import 'package:design_courses/app/model/course.dart';
 import 'package:design_courses/layout/constants.dart';
 import 'package:flutter/cupertino.dart';
@@ -53,7 +54,7 @@ class _CourseScreenState extends State<CourseScreen> {
         color: kBackgroundColor,
         child: SlidingUpPanel(
           controller: _panelController,
-          panel: Container(),
+          panel: const CourseSectionsScreen(),
           backdropEnabled: true,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(34.0.r),
